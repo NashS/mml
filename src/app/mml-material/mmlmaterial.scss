@@ -4,3 +4,11 @@ $fa-font-path: '../../node_modules/font-awesome/fonts';
 .mat-spacer {
   flex: 1 1 auto;
 }
+
+a[mat-button] {
+  color: inherit;
+}
+
+::ng-deep .mat-icon use {
+  stroke: currentColor;
+}

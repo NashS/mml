@@ -1,0 +1,15 @@
+@import '~@angular/material/theming';
+
+// always include only once per project
+@include mat-core();
+
+$mml-app-primary: mat-palette($mat-amber, 500, 500, 900);
+$mml-app-accent:  mat-palette($mat-light-blue, 500, 50, 900);
+
+// The warn palette is optional (defaults to red).
+$mml-app-warn:    mat-palette($mat-deep-orange, A200);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$mml-app-theme: mat-light-theme($mml-app-primary, $mml-app-accent, $mml-app-warn);
+
+@include angular-material-theme($mml-app-theme);

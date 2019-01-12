@@ -1,11 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar color="primary">
-  <mat-toolbar-row class="header">
-    <span><mat-icon fontIcon="fa-caret-right"></mat-icon></span>
-    <span>Milton Music Studios</span>
+  <mat-toolbar-row>
+    <span><mat-icon svgIcon="metronome"></mat-icon></span>
+    <span>Milton Music Lessons</span>
     <span class="mat-spacer"></span>
     <span><a mat-button routerLink="/summary">Home</a></span>
     <span><a mat-button routerLink="/inquiry">Inquiries</a></span>
   </mat-toolbar-row>
 </mat-toolbar>
-<router-outlet></router-outlet>
+<div fxLayout="row" fxLayoutAlign="start center">
+  <span class="mat-spacer"></span>
+  <span>
+    <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px">
+      <router-outlet></router-outlet>
+    </div>
+  </span>
+  <span class="mat-spacer"></span>
+</div>
+
+
