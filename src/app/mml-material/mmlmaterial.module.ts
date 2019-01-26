@@ -1,23 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { MatToolbarModule, MatButtonModule, MatIconModule, MatIconRegistry } from '@angular/material';
+import {
+         MatToolbarModule,
+         MatButtonModule,
+         MatIconModule,
+         MatIconRegistry,
+         MatFormFieldModule,
+         MatInputModule,
+         MatCardModule
+        } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
-
+import {TextFieldModule} from '@angular/cdk/text-field';
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    HttpClientModule
+    CommonModule
   ],
   exports: [
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    TextFieldModule
   ],
   providers: [
     MatIconRegistry

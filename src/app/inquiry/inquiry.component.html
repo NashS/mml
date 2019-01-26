@@ -1,3 +1,30 @@
-<p>
-  inquiry works!
-</p>
+<form [formGroup]="commentsForm" (ngSubmit)="onSubmit()">
+  <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Name" [formControl]="name">
+        <mat-error *ngIf="name.invalid">{{getErrorMessage(name)}}</mat-error>
+        <mat-icon matSuffix fontIcon="fa-font"></mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <textarea matInput placeholder="Message" [formControl]="message"
+        cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5" required></textarea>
+        <mat-error *ngIf="message.invalid">{{getErrorMessage(message)}}</mat-error>
+        <mat-icon matSuffix fontIcon="fa-comment"></mat-icon>
+        <mat-hint>Required</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter your email" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage(email)}}</mat-error>
+        <mat-icon matSuffix fontIcon="fa-at"></mat-icon>
+        <mat-hint>Required</mat-hint>
+      </mat-form-field>
+      <button mat-raised-button type="submit" color="primary" [disabled]="!commentsForm.valid">Send Comments</button>
+      <mat-card>
+        <mat-card-title>Thank You for your Comments</mat-card-title>
+        <mat-icon fontIcon="fa-check"></mat-icon>
+        <mat-card-content>
+          I will respond to you as soon as possible.
+        </mat-card-content>
+      </mat-card>
+  </div>
+</form>

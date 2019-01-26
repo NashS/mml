@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -11,6 +12,7 @@ import { MMLMdbModule } from './mml-mdb/mml-mdb.module';
 import { StudioComponent } from './summary/sections/studio/studio.component';
 import { AboutMeComponent } from './summary/sections/about-me/about-me.component';
 import { TestamonialsComponent } from './summary/sections/testamonials/testamonials.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,10 +31,13 @@ import { TestamonialsComponent } from './summary/sections/testamonials/testamoni
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     MMLMaterialModule,
-    MMLMdbModule
+    MMLMdbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
