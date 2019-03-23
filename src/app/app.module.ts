@@ -1,3 +1,6 @@
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { CommonModule } from '@angular/common';
+import { TransferHttpCacheModule } from '@nguniversal/common';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,6 +16,7 @@ import { StudioComponent } from './summary/sections/studio/studio.component';
 import { AboutMeComponent } from './summary/sections/about-me/about-me.component';
 import { TestamonialsComponent } from './summary/sections/testamonials/testamonials.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WelcomeBannerComponent } from './welcome-banner/welcome-banner.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InquiryComponent,
     StudioComponent,
     AboutMeComponent,
-    TestamonialsComponent
+    TestamonialsComponent,
+    WelcomeBannerComponent
   ],
   entryComponents: [
     StudioComponent,
@@ -29,7 +34,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TestamonialsComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
+    NgtUniversalModule,
+    TransferHttpCacheModule,
+    HttpClientModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -37,10 +45,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MMLMaterialModule,
     MMLMdbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
   exports: []
 })
 export class AppModule { }

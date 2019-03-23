@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
+import { ButtonsModule, IconsModule, CarouselModule, WavesModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [],
@@ -9,7 +9,9 @@ import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
   ],
   exports: [
     CarouselModule,
-    WavesModule
+    WavesModule,
+    ButtonsModule,
+    IconsModule
   ]
 })
 export class MMLMdbModule { }

@@ -1,6 +1,6 @@
 import { environment } from './../../environments/environment';
 import { CommentsForm } from './comments';
-import { Injectable } from '@angular/core';
+import { Injectable, isDevMode } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, tap } from 'rxjs/operators';
 import { of, Observable } from 'rxjs';
@@ -22,6 +22,9 @@ export class EmailService {
 
   sendEmail(commentsForm: CommentsForm): Observable<any> {
     console.log(commentsForm);
+    if (isDevMode()) {
+      return of();
+    }
     return this.http.post(this.emailURL,
                           this.toEmailerRqBody(commentsForm),
                           this.httpOptions

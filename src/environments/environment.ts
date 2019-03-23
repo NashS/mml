@@ -4,8 +4,9 @@
 
 export const environment = {
   production: false,
-  emailUrl: 'https://nfavk5yem4.execute-api.us-east-1.amazonaws.com/Prod/send',
-  toEmails: ['nasseq@gmail.com']
+  emailUrl: 'https://nfavk5yem4.execute-api.us-east-1.amazonaws.com/Stage/send',
+  toEmails: ['nasseq@gmail.com'],
+  baseHref: '/'
 };
 
 /*

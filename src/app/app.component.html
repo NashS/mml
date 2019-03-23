@@ -5,13 +5,16 @@
     <span>Milton Music Lessons</span>
     <span class="mat-spacer"></span>
     <span><a mat-button routerLink="/summary">Home</a></span>
-    <span><a mat-button routerLink="/inquiry">Inquiries</a></span>
+    <span><a mat-button routerLink="/inquiry">Contact Me</a></span>
   </mat-toolbar-row>
 </mat-toolbar>
+<app-welcome-banner></app-welcome-banner>
 <div fxLayout="row" fxLayoutAlign="start center">
   <span class="mat-spacer"></span>
   <span>
+    <div fxLayout="column" fxLayoutAlign="start start">
       <router-outlet></router-outlet>
+    </div>
   </span>
   <span class="mat-spacer"></span>
 </div>

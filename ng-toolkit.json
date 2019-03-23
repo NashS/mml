@@ -1,0 +1,22 @@
+{
+  "universal": {
+    "project": "mml",
+    "skipInstall": false,
+    "directory": ".",
+    "http": true
+  },
+  "serverless": {
+    "--": [
+      "—-provider",
+      "aws"
+    ],
+    "project": "mml",
+    "provider": "aws",
+    "skipInstall": false,
+    "directory": ".",
+    "serverless": {
+      "aws": {},
+      "gcloud": {}
+    }
+  }
+}
