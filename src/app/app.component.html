@@ -1,22 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar color="primary">
   <mat-toolbar-row>
+    <div id="">
+      <button mat-button class="menu-button">
+        <mat-icon fontIcon="fa-bars"></mat-icon>
+      </button>
+    </div>
     <span><mat-icon svgIcon="metronome"></mat-icon></span>
     <span>Milton Music Lessons</span>
     <span class="mat-spacer"></span>
-    <span><a mat-button routerLink="/summary">Home</a></span>
-    <span><a mat-button routerLink="/inquiry">Contact Me</a></span>
+    <span><a mat-button routerLink="/summary"><mat-icon fontIcon="fa-home"></mat-icon>Home</a></span>
+    <span><a mat-button routerLink="/inquiry"><mat-icon fontIcon="fa-at"></mat-icon>Contact Me</a></span>
   </mat-toolbar-row>
 </mat-toolbar>
-<app-welcome-banner></app-welcome-banner>
+<app-banner></app-banner>
 <div fxLayout="row" fxLayoutAlign="start center">
-  <span class="mat-spacer"></span>
-  <span>
-    <div fxLayout="column" fxLayoutAlign="start start">
-      <router-outlet></router-outlet>
-    </div>
+  <span fxFlex="0 1 20" fxFlex.lt-sm="0 1 0"></span>
+  <span fxFlex="0 1 60" fxFlex.lt-sm="0 1 100">
+    <router-outlet></router-outlet>
   </span>
-  <span class="mat-spacer"></span>
+  <span fxFlex="0 1 20" fxFlex.lt-sm="0 1 0"></span>
 </div>
 
 

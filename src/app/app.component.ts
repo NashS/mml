@@ -12,8 +12,7 @@ export class AppComponent implements OnInit {
 
     public ngOnInit(): void {
         if (!isPlatformBrowser(this.platformId)) {
-            let bases = this.document.getElementsByTagName('base');
-    
+            const bases = this.document.getElementsByTagName('base');
             if (bases.length > 0) {
                 bases[0].setAttribute('href', environment.baseHref);
             }

@@ -16,7 +16,7 @@ import { StudioComponent } from './summary/sections/studio/studio.component';
 import { AboutMeComponent } from './summary/sections/about-me/about-me.component';
 import { TestamonialsComponent } from './summary/sections/testamonials/testamonials.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { WelcomeBannerComponent } from './welcome-banner/welcome-banner.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { WelcomeBannerComponent } from './welcome-banner/welcome-banner.componen
     StudioComponent,
     AboutMeComponent,
     TestamonialsComponent,
-    WelcomeBannerComponent
+    BannerComponent
   ],
   entryComponents: [
     StudioComponent,

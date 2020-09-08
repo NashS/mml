@@ -16,22 +16,6 @@ export class SummaryComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router, private summarySectionService: SummarySectionService) { }
 
-  ngOnInit() {
-    this.summarySectionService.getSummarySections().subscribe(summarySections => {
-      this.summarySections = summarySections;
-      this.summaryRoute = this.router.config.find(route => route.path === 'summary');
-      for (const summarySection of this.summarySections) {
-        this.summaryRoute.children.push({path: summarySection.bodyRoute, component: summarySection.bodyComponent});
-      }
-      this.summaryRoute.children.push({path: '', redirectTo: this.summarySections[0].bodyRoute, pathMatch: 'full'});
-      this.router.navigate([this.summaryRoute.children[0].path], {relativeTo: this.route});
-      console.log(this.router.config);
-    });
-  }
-
-  onActiveSlideChange(event: SlideChangeEvent) {
-    console.log(event);
-    this.router.navigate([this.summaryRoute.children[event.relatedTarget].path], {relativeTo: this.route});
-  }
+  ngOnInit() {}
 
 }

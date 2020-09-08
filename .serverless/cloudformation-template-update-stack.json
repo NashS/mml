@@ -92,7 +92,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/mml/production/1549204882709-2019-02-03T14:41:22.709Z/mml.zip"
+          "S3Key": "serverless/mml/production/1590288586547-2020-05-24T02:49:46.547Z/mml.zip"
         },
         "FunctionName": "mml-production-api",
         "Handler": "lambda.universal",
@@ -103,7 +103,7 @@
             "Arn"
           ]
         },
-        "Runtime": "nodejs6.10",
+        "Runtime": "nodejs10.x",
         "Timeout": 10
       },
       "DependsOn": [
@@ -111,14 +111,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ApiLambdaVersion1ScigbMY3QqaoHAnJ18HaiD5iWZONUxcniz9NwW2cc": {
+    "ApiLambdaVersionI7w6QgLQLnIoq0EOA9FJouFkQtIhLxULYUqRKrd3E": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "rBbMq7Ea1eH9T8Yg4t94boVDIT92XxeoPiFZHv1mFQ8="
+        "CodeSha256": "gEyfYI6T9xY9++MDOm25x6Wi5rl8QYDO2cDSlrWvIP8="
       }
     },
     "ApiGatewayRestApi": {
@@ -228,7 +228,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1549204882772": {
+    "ApiGatewayDeployment1590288586806": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -284,7 +284,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersion1ScigbMY3QqaoHAnJ18HaiD5iWZONUxcniz9NwW2cc"
+        "Ref": "ApiLambdaVersionI7w6QgLQLnIoq0EOA9FJouFkQtIhLxULYUqRKrd3E"
       }
     },
     "ServiceEndpoint": {

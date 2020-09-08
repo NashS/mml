@@ -7,7 +7,8 @@ import {
          MatIconRegistry,
          MatFormFieldModule,
          MatInputModule,
-         MatCardModule
+         MatCardModule,
+         MatSidenavModule
         } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 import {TextFieldModule} from '@angular/cdk/text-field';
@@ -24,6 +25,7 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
+    MatSidenavModule,
     TextFieldModule
   ],
   providers: [
@@ -33,7 +35,6 @@ import {TextFieldModule} from '@angular/cdk/text-field';
 export class MMLMaterialModule {
   constructor(private domSanitizer: DomSanitizer, public matIconRegistry: MatIconRegistry) {
     matIconRegistry.addSvgIcon('metronome', domSanitizer.bypassSecurityTrustResourceUrl('assets/images/metronome.svg'));
-    matIconRegistry.addSvgIcon('evil', domSanitizer.bypassSecurityTrustResourceUrl('assets/images/evil.svg'));
     matIconRegistry.registerFontClassAlias( 'fa' );
     matIconRegistry.setDefaultFontSetClass( 'fa' );
   }

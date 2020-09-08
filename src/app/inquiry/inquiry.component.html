@@ -1,5 +1,6 @@
 <form [formGroup]="commentsForm" (ngSubmit)="onSubmit()">
   <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px" @commentsAnimation (@commentsAnimation.done)="changeAnimationState($event)" *ngIf="!submitted">
+    <mat-card class="mat-card--border-color-grey my-5">
     <mat-form-field appearance="outline">
       <input matInput placeholder="Name" [formControl]="name">
       <mat-error *ngIf="name.invalid">{{getErrorMessage(name)}}</mat-error>
@@ -7,7 +8,7 @@
     </mat-form-field>
     <mat-form-field appearance="outline">
       <textarea matInput placeholder="Message" [formControl]="message"
-      cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5" required></textarea>
+      cdkTextareaAutosize cdkAutosizeMinRows="5" cdkAutosizeMaxRows="12" required></textarea>
       <mat-error *ngIf="message.invalid">{{getErrorMessage(message)}}</mat-error>
       <mat-icon matSuffix fontIcon="fa-comment"></mat-icon>
       <mat-hint>Required</mat-hint>
@@ -19,8 +20,9 @@
       <mat-hint>Required</mat-hint>
     </mat-form-field>
     <button mat-raised-button type="submit" color="primary" [disabled]="!commentsForm.valid">Send Comments</button>
+  </mat-card>
   </div>
-  <mat-card [@submissionAnimation]="submittedAnimationState" *ngIf="submitted">
+  <mat-card class="mat-card--border-color-grey my-5" [@submissionAnimation]="submittedAnimationState" *ngIf="submitted">
       <mat-card-title>Thank You for your Comments</mat-card-title>
       <mat-icon fontIcon="fa-check"></mat-icon>
       <mat-card-content>

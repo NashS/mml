@@ -13,7 +13,7 @@ import { trigger, state, transition, style, animate, query, stagger } from '@ang
       transition(':leave', [
 /*         style({ opacity: 1 }),
         animate('1s ease-out', style({ opacity: '0' })) */
-        query('mat-form-field, button', [
+        query('mat-card, mat-form-field, button', [
           style({opacity: 1, height: '*'}),
           stagger(-250, [
             animate('250ms ease-in', style({opacity: '0', height: '0'}))
