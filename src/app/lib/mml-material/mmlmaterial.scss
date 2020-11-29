@@ -1,0 +1,20 @@
+//$fa-font-path: '../../node_modules/font-awesome/fonts';
+// @import '../../../node_modules/font-awesome/scss/font-awesome.scss';
+
+mat-form-field {
+  width: 100%;
+}
+
+a[mat-button] {
+  color: inherit;
+}
+
+.mat-button .mat-icon {
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+}
+
+::ng-deep .mat-icon use {
+  stroke: currentColor;
+}

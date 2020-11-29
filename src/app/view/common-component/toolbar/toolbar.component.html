@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayout="start stretch">
+    <div fxShow fxHide.gt-xs>
+      <button mat-button (click)="onToggleSidenav()">
+        <mat-icon fontIcon="fa-bars"></mat-icon>
+      </button>
+    </div>
+    <span><mat-icon svgIcon="metronome"></mat-icon></span>
+    <span>Milton Music Lessons</span>
+    <span fxFlex="1 1 auto"></span>
+    <div fxShow fxHide.lt-sm>
+      <span><a mat-button routerLink="/summary"><mat-icon fontIcon="fa-home"></mat-icon>Home</a></span>
+      <span><a mat-button routerLink="/aboutUs"><mat-icon fontIcon="fa-user"></mat-icon>About Us</a></span>
+      <span><a mat-button routerLink="/inquiry"><mat-icon fontIcon="fa-comment"></mat-icon>Inquiries</a></span>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

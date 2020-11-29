@@ -1,10 +1,12 @@
+import { AboutUsComponent } from './view/about-us/about-us.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SummaryComponent } from './summary/summary.component';
-import { InquiryComponent } from './inquiry/inquiry.component';
+import { SummaryComponent } from './view/summary/summary.component';
+import { InquiryComponent } from './view/inquiry/inquiry.component';
 
 const routes: Routes = [
   { path: 'summary', component: SummaryComponent, children: []},
+  { path: 'aboutUs', component: AboutUsComponent},
   { path: 'inquiry', component: InquiryComponent},
   { path: '', redirectTo: 'summary', pathMatch: 'full' },
 ];

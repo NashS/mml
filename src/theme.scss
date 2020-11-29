@@ -1,5 +1,6 @@
 @import '~@angular/material/theming';
-@import 'app/banner/banner.component.theme';
+@import 'app/view/common-component/banner/banner.component';
+@import 'app/app.component';
 
 // always include only once per project
 @include mat-core();
@@ -12,6 +13,5 @@ $mml-app-warn:    mat-palette($mat-deep-orange);
 $mml-app-theme: mat-light-theme($mml-app-primary, $mml-app-accent, $mml-app-warn);
 
 @include angular-material-theme($mml-app-theme);
-
 @include banner-theme($mml-app-theme);
-
+@include sidenav-theme($mml-app-theme);

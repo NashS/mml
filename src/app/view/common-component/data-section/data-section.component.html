@@ -1,0 +1,13 @@
+<div class="data-section-container" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="25px">
+  <ng-container *ngIf="!useAltStyle; else altStyle">
+    <div class="data-section-content" [innerHTML]="dataSection.contentHTML" fxFlex="1 1 auto">
+    </div>
+    <img class="data-section-image" src="{{dataSection.imageSource}}"/>
+  </ng-container>
+  <ng-template #altStyle>
+    <img class="data-section-image" src="{{dataSection.imageSource}}"/>
+    <div class="data-section-content" [innerHTML]="dataSection.contentHTML" fxFlex="1 1 auto">
+        <p>{{dataSection.content}}</p>
+    </div>
+  </ng-template>
+</div>

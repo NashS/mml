@@ -7,31 +7,30 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SummaryComponent } from './summary/summary.component';
-import { InquiryComponent } from './inquiry/inquiry.component';
+import { SummaryComponent } from './view/summary/summary.component';
+import { InquiryComponent } from './view/inquiry/inquiry.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MMLMaterialModule } from './mml-material/mmlmaterial.module';
-import { MMLMdbModule } from './mml-mdb/mml-mdb.module';
-import { StudioComponent } from './summary/sections/studio/studio.component';
-import { AboutMeComponent } from './summary/sections/about-me/about-me.component';
-import { TestamonialsComponent } from './summary/sections/testamonials/testamonials.component';
+import { MMLMaterialModule } from './lib/mml-material/mmlmaterial.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BannerComponent } from './banner/banner.component';
+import { BannerComponent } from './view/common-component/banner/banner.component';
+import { ToolbarComponent } from './view/common-component/toolbar/toolbar.component';
+import { AboutUsComponent } from './view/about-us/about-us.component';
+import { DataSectionComponent } from './view/common-component/data-section/data-section.component';
+import { DataSectionContentComponent } from './view/common-component/data-section/data-section-content/data-section-content.component';
+import { AgmCoreModule } from '@agm/core';
+import { environment } from '../environments/environment';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SummaryComponent,
     InquiryComponent,
-    StudioComponent,
-    AboutMeComponent,
-    TestamonialsComponent,
-    BannerComponent
-  ],
-  entryComponents: [
-    StudioComponent,
-    AboutMeComponent,
-    TestamonialsComponent
+    BannerComponent,
+    ToolbarComponent,
+    DataSectionComponent,
+    AboutUsComponent,
+    DataSectionContentComponent
   ],
   imports: [
     CommonModule,
@@ -43,10 +42,12 @@ import { BannerComponent } from './banner/banner.component';
     BrowserAnimationsModule,
     FlexLayoutModule,
     MMLMaterialModule,
-    MMLMdbModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: environment.googleMapsAPIKey
+    })
   ],
   providers: [],
   exports: []

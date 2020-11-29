@@ -32,7 +32,7 @@
               "node_modules/angular-bootstrap-md/scss/mdb-free.scss",
               "src/styles.scss",
               "src/theme.scss",
-              "src/app/mml-material/mmlmaterial.scss"
+              "src/app/lib/mml-material/mmlmaterial.scss"
             ],
             "scripts": [
               "node_modules/chart.js/dist/Chart.js",
