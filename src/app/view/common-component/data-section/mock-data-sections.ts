@@ -1,7 +1,8 @@
 import { DataSection } from './data-section';
+import { MmlAgmComponent } from 'src/app/lib/mml-agm/mml-agm.component';
 
 export const SUMMARYSECTIONS: DataSection[] = [
-  {imageSource: '/assets/images/Student.jpg', headingString: '', contentHTML: ''},
+  {imageSource: '/assets/images/Student.jpg'},
   {
     imageSource: '/assets/images/Studio.jpg',
     headingString: 'The Studio',
@@ -15,7 +16,7 @@ export const SUMMARYSECTIONS: DataSection[] = [
               'forward to hearing from you and hope to infuse in your child a love for music and help them embark on a lifelong ' +
               'musical journey.</p>'
   },
-  {imageSource: '/assets/images/Vouch.jpg', headingString: '', contentHTML: ''}
+  {imageSource: '/assets/images/Vouch.jpg'}
 ];
 
 export const ABOUTUSSECTIONS: DataSection[] = [
@@ -33,9 +34,14 @@ export const ABOUTUSSECTIONS: DataSection[] = [
               'Bachelor of Education from the University of Toronto. In addition to the above, I have also completed additional ' +
               'qualifications in music from the University of Toronto.</p>'
   },
-  {imageSource: '/assets/images/Studio.jpg', headingString: '', contentHTML: '<p>My music studio features:<p>' +
+  {imageSource: '/assets/images/Studio.jpg', contentHTML: '<p>My music studio features:<p>' +
               '<ul><li>A large area for circle activities</li><li>Four digital keyboards</li><li>Two digital pianos</li></ul>' +
               '<p>There can be anywhere from four to six students along with their parents that can be accommodated comfortably ' +
               'in my studio</p>'
+  },
+  {
+    contentHTML: '<p>Address: 1111 Woodward Ave., Milton, ON, L9T 5Y5</p>' +
+              '<p>Phone: (905) 636-0765</p>',
+    component: MmlAgmComponent
   }
 ];
