@@ -16,9 +16,10 @@ import { BannerComponent } from './view/common-component/banner/banner.component
 import { ToolbarComponent } from './view/common-component/toolbar/toolbar.component';
 import { AboutUsComponent } from './view/about-us/about-us.component';
 import { DataSectionComponent } from './view/common-component/data-section/data-section.component';
-import { DataSectionContentComponent } from './view/common-component/data-section/data-section-content/data-section-content.component';
 import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
+import { MmlAgmModule } from './lib/mml-agm/mml-agm.module';
+import { MmlAgmComponent } from './lib/mml-agm/mml-agm.component';
 
 
 @NgModule({
@@ -30,7 +31,9 @@ import { environment } from '../environments/environment';
     ToolbarComponent,
     DataSectionComponent,
     AboutUsComponent,
-    DataSectionContentComponent
+  ],
+  entryComponents: [
+    MmlAgmComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +50,8 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: environment.googleMapsAPIKey
-    })
+    }),
+    MmlAgmModule
   ],
   providers: [],
   exports: []
