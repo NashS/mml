@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
 })
 export class BannerComponent implements OnInit {
 
-  private text$: Observable<BannerContent>;
+  text$: Observable<BannerContent>;
 
   constructor(private location: Location, private router: Router, private bannerContentService: BannerContentService) { }
 
