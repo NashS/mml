@@ -1,5 +1,5 @@
+import { MmlAgmComponent } from './../../../lib/mml-agm/mml-agm.component';
 import { DataSection } from './data-section';
-import { MmlAgmComponent } from 'src/app/lib/mml-agm/mml-agm.component';
 
 export const SUMMARYSECTIONS: DataSection[] = [
   {imageSource: '/assets/images/Student.jpg'},
