@@ -16,7 +16,7 @@ export const SUMMARYSECTIONS: DataSection[] = [
               'forward to hearing from you and hope to infuse in your child a love for music and help them embark on a lifelong ' +
               'musical journey.</p>'
   },
-  {imageSource: '/assets/images/Vouch.jpg'}
+  {imageSource: '/assets/images/Piano.jpg'}
 ];
 
 export const ABOUTUSSECTIONS: DataSection[] = [
@@ -40,7 +40,7 @@ export const ABOUTUSSECTIONS: DataSection[] = [
               'in my studio</p>'
   },
   {
-    contentHTML: '<p>Address: 1111 Woodward Ave., Milton, ON, L9T 5Y5</p>' +
+    contentHTML: '<p>Address: Woodward Ave. & Thompson, Milton, ON</p>' +
               '<p>Phone: (905) 636-0765</p>',
     component: MmlAgmComponent
   }
