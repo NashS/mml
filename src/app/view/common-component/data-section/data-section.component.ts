@@ -16,8 +16,6 @@ export class DataSectionComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     if (this.dataSection.component != null) {
-      console.log('detected non-null component');
-      console.log('detected module: ' + this.dataSection.component);
       const componentFactory = this.resolver.resolveComponentFactory(this.dataSection.component);
       this.viewContainer.createComponent(componentFactory);
       this.cdr.detectChanges();
