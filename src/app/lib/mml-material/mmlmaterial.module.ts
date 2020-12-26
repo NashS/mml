@@ -13,6 +13,9 @@ import {
         } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 import {TextFieldModule} from '@angular/cdk/text-field';
+import { isPlatformServer } from '@angular/common';
+import { Inject } from '@angular/core';
+import { PLATFORM_ID } from '@angular/core';
 
 @NgModule({
   declarations: [],
@@ -35,9 +38,18 @@ import {TextFieldModule} from '@angular/cdk/text-field';
   ]
 })
 export class MMLMaterialModule {
-  constructor(private domSanitizer: DomSanitizer, public matIconRegistry: MatIconRegistry) {
-    matIconRegistry.addSvgIcon('metronome', domSanitizer.bypassSecurityTrustResourceUrl('assets/images/metronome.svg'));
+  constructor(@Inject(PLATFORM_ID) private platformId: any, private domSanitizer: DomSanitizer, public matIconRegistry: MatIconRegistry) {
+    this.registerIcon('metronome', 'metronome');
     matIconRegistry.registerFontClassAlias( 'fa' );
     matIconRegistry.setDefaultFontSetClass( 'fa' );
+  }
+
+  private registerIcon(name: string, filename: string) {
+    if (isPlatformServer(this.platformId)) {
+      /* Register empty icons for server-side-rendering to prevent errors */
+      this.matIconRegistry.addSvgIconLiteral(name, this.domSanitizer.bypassSecurityTrustHtml('<svg></svg>'));
+    } else {
+      this.matIconRegistry.addSvgIcon(name, this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/images/${filename}.svg`));
+    }
   }
 }
