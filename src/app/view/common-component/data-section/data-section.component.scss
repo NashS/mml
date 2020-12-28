@@ -1,8 +1,13 @@
-.data-section-container {
+.data-section-container-desktop,
+.data-section-container-mobile {
   margin: 10px;
 }
 
 .data-section-image {
   max-width: 200px;
   max-height: 200px;
+}
+
+.centred {
+  margin: auto;
 }

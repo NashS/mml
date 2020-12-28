@@ -1,4 +1,4 @@
-<div class="data-section-container" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="25px">
+<div class="data-section-container-desktop" fxLayout="row" fxLayoutAlign="start center" fxShow.gt-xs fxHide fxLayoutGap="25px">
   <ng-container *ngIf="!useAltStyle; else altStyle">
     <div class="data-section-content" [innerHTML]="dataSection.contentHTML" fxFlex>
     </div>
@@ -9,8 +9,16 @@
     <img class="data-section-image" src="{{dataSection.imageSource}}"/>
     <ng-template #viewContainer></ng-template>
     <div class="data-section-content" [innerHTML]="dataSection.contentHTML" fxFlex>
-        <p>{{dataSection.content}}</p>
     </div>
   </ng-template>
 </div>
-
+<div class="data-section-container-mobile" fxLayout="column" fxLayoutAlign="start center" fxHide.gt-xs fxShow fxLayoutGap="25px">
+    <ng-template #viewContainer></ng-template>
+    <ng-container *ngIf="dataSection.contentHTML; else centreImage">
+      <div class="data-section-content" [innerHTML]="dataSection.contentHTML" fxFlex></div>
+      <img class="data-section-image" src="{{dataSection.imageSource}}"/>
+    </ng-container>
+    <ng-template #centreImage>
+      <img class="data-section-image centred" src="{{dataSection.imageSource}}"/>
+    </ng-template>
+</div>
