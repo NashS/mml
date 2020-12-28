@@ -12,13 +12,10 @@
     </div>
   </ng-template>
 </div>
-<div class="data-section-container-mobile" fxLayout="column" fxLayoutAlign="start center" fxHide.gt-xs fxShow fxLayoutGap="25px">
-    <ng-template #viewContainer></ng-template>
-    <ng-container *ngIf="dataSection.contentHTML; else centreImage">
-      <div class="data-section-content" [innerHTML]="dataSection.contentHTML" fxFlex></div>
-      <img class="data-section-image" src="{{dataSection.imageSource}}"/>
-    </ng-container>
-    <ng-template #centreImage>
-      <img class="data-section-image centred" src="{{dataSection.imageSource}}"/>
-    </ng-template>
+<div class="data-section-container-mobile" fxLayout="column" fxLayoutAlign="start start" fxHide.gt-xs fxShow fxLayoutGap="25px">
+    <div class="data-section-content" [innerHTML]="dataSection.contentHTML" fxFlex></div>
+    <img class="data-section-image centred" src="{{dataSection.imageSource}}"/>
+    <div class="centred">
+      <ng-template #viewContainer></ng-template>
+    </div>
 </div>

@@ -1,4 +1,11 @@
-import { Component, Input, ComponentFactoryResolver, ViewContainerRef, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { Component,
+         Input,
+         ComponentFactoryResolver,
+         ViewContainerRef,
+         AfterViewInit,
+         ChangeDetectorRef,
+         ViewChildren,
+         QueryList } from '@angular/core';
 import { DataSection } from './data-section';
 
 @Component({
@@ -10,16 +17,16 @@ export class DataSectionComponent implements AfterViewInit {
 
   @Input() useAltStyle?: boolean;
   @Input() dataSection: DataSection;
-  @ViewChild('viewContainer', {read: ViewContainerRef}) viewContainer: ViewContainerRef;
+  @ViewChildren('viewContainer', {read: ViewContainerRef}) viewContainers: QueryList<ViewContainerRef>;
 
-  constructor(private resolver: ComponentFactoryResolver, private cdr: ChangeDetectorRef) { }
+  constructor(private resolver: ComponentFactoryResolver,
+              private cdr: ChangeDetectorRef) { }
 
   ngAfterViewInit() {
     if (this.dataSection.component != null) {
       const componentFactory = this.resolver.resolveComponentFactory(this.dataSection.component);
-      this.viewContainer.createComponent(componentFactory);
+      this.viewContainers.map( (vcr: ViewContainerRef) => vcr.createComponent(componentFactory) );
       this.cdr.detectChanges();
     }
   }
-
 }
