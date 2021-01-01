@@ -27,8 +27,7 @@
     "@angular/compiler": "~8.2.14",
     "@angular/core": "~8.2.14",
     "@angular/material": "^8.2.3",
-    "@fortawesome/angular-fontawesome": "^0.8.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+
     "@ng-toolkit/serverless": "^1.1.51",
     "@ng-toolkit/universal": "^8.1.0",
     "@nguniversal/common": "~7.0.0",
