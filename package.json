@@ -36,7 +36,6 @@
     "@angular/router": "~8.2.14",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@ng-toolkit/serverless": "^1.1.51",
-    "@ng-toolkit/universal": "^1.1.51",
     "@nguniversal/common": "~7.0.0",
     "@nguniversal/express-engine": "~7.0.0",
     "@nguniversal/module-map-ngfactory-loader": "~7.0.0",
