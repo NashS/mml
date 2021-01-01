@@ -34,7 +34,6 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/platform-server": "~8.2.14",
     "@angular/router": "~8.2.14",
-    "@fortawesome/angular-fontawesome": "^0.3.0",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@ng-toolkit/serverless": "^1.1.51",
     "@ng-toolkit/universal": "^1.1.51",
