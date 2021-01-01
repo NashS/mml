@@ -1,16 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-         MatToolbarModule,
-         MatButtonModule,
-         MatIconModule,
-         MatIconRegistry,
-         MatFormFieldModule,
-         MatInputModule,
-         MatCardModule,
-         MatSidenavModule,
-         MatListModule
-        } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
 import {TextFieldModule} from '@angular/cdk/text-field';
 import { isPlatformServer } from '@angular/common';
