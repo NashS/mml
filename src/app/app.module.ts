@@ -19,6 +19,7 @@ import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
 import { MmlAgmModule } from './lib/mml-agm/mml-agm.module';
 import { MmlAgmComponent } from './lib/mml-agm/mml-agm.component';
+import { HomeworkComponent } from './view/homework/homework.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { MmlAgmComponent } from './lib/mml-agm/mml-agm.component';
     ToolbarComponent,
     DataSectionComponent,
     AboutUsComponent,
+    HomeworkComponent,
   ],
   entryComponents: [
     MmlAgmComponent

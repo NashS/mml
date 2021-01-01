@@ -20,5 +20,12 @@ export const BANNERCONTENTS: Map<string, BannerContent> = new Map([
       title: 'About Milton Music Studios',
       content: ''
     }
+  ],
+  [
+    'homework',
+    {
+      title: 'Homework',
+      content: ''
+    }
   ]
 ]);
