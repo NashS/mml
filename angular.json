@@ -36,8 +36,7 @@
               "src/app/lib/mml-agm/mml-agm.scss"
             ],
             "scripts": [
-              "node_modules/chart.js/dist/Chart.js",
-              "node_modules/hammerjs/hammer.min.js"
+              "node_modules/chart.js/dist/Chart.js"
             ]
           },
           "configurations": {
@@ -168,5 +167,8 @@
     "@schematics/angular:component": {
       "styleext": "scss"
     }
+  },
+  "cli": {
+    "analytics": "f5874ea6-0d9d-4d8c-9bbd-8a107e984009"
   }
 }
