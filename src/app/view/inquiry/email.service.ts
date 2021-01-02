@@ -21,7 +21,6 @@ export class EmailService {
   constructor(private http: HttpClient) { }
 
   sendEmail(commentsForm: CommentsForm): Observable<any> {
-    console.log(commentsForm);
     if (isDevMode()) {
       return of();
     }

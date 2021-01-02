@@ -63,7 +63,6 @@ export class InquiryComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.commentsForm.value);
     this.emailService.sendEmail(this.commentsForm.value).pipe(
       finalize(() => {
         this.sendEmailConfirmationBox();
