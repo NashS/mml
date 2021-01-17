@@ -9,8 +9,6 @@ import { shareReplay, map, startWith } from 'rxjs/operators';
 })
 export class BannerContentService {
 
-  private bannerContent: Observable<Map<string, BannerContent>>;
-
   constructor() { }
 
   private _getBannerContent(): Observable<Map<string, BannerContent>> {
