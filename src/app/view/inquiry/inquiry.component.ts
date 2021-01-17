@@ -46,6 +46,7 @@ export class InquiryComponent implements OnInit {
   submitted = false;
   submittedAnimationState: 'initial' | 'formClosed';
 
+  isDisabledAnimation = true;
 
   constructor(private emailService: EmailService) { }
 
@@ -63,11 +64,10 @@ export class InquiryComponent implements OnInit {
   }
 
   onSubmit() {
-    this.emailService.sendEmail(this.commentsForm.value).pipe(
-      finalize(() => {
-        this.sendEmailConfirmationBox();
-      })
-    ).subscribe();
+    this.isDisabledAnimation = false;
+
+    this.emailService.sendEmail(this.commentsForm.value).subscribe();
+
     this.submitted = true;
   }
 
