@@ -24,7 +24,7 @@ export const BANNERCONTENTS: Map<string, BannerContent> = new Map([
   [
     'homework',
     {
-      title: 'Homework',
+      title: 'Practice Notes and Music Sheets are provided',
       content: ''
     }
   ]
