@@ -20,7 +20,8 @@ import { environment } from '../environments/environment';
 import { MmlAgmModule } from './lib/mml-agm/mml-agm.module';
 import { MmlAgmComponent } from './lib/mml-agm/mml-agm.component';
 import { HomeworkComponent } from './view/homework/homework.component';
-
+import { HomeworkAddCourseModalComponent } from './view/homework/homework-add-course-modal/homework-add-course-modal.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -32,9 +33,11 @@ import { HomeworkComponent } from './view/homework/homework.component';
     DataSectionComponent,
     AboutUsComponent,
     HomeworkComponent,
+    HomeworkAddCourseModalComponent,
   ],
   entryComponents: [
-    MmlAgmComponent
+    MmlAgmComponent,
+    HomeworkAddCourseModalComponent
   ],
   imports: [
     CommonModule,
@@ -54,7 +57,7 @@ import { HomeworkComponent } from './view/homework/homework.component';
     }),
     MmlAgmModule
   ],
-  providers: [],
+  providers: [CookieService],
   exports: []
 })
 export class AppModule { }
