@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Add Courses</h1>
+<div mat-dialog-content>
+  <p>You may submit multiple course accessCodes at a time by clicking the '+' button</p>
+  <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5px">
+    <form [formGroup]="accessCodesForm" (ngSubmit)="onSubmit()" fxFlex>
+      <mat-form-field *ngFor="let accessCodeControl of accessCodes.controls; index as i">
+        <mat-label>Course Access Code</mat-label>
+        <input matInput [formControl]="accessCodes.controls[i]">
+        <mat-error *ngIf="accessCodes.controls[i].invalid">{{getErrorMessage(accessCodes.controls[i])}}</mat-error>
+        <mat-hint>Required</mat-hint>
+      </mat-form-field>
+    </form>
+    <button mat-button (click)="addAccessCode()" class="dialog-affirmative-button"><mat-icon fontIcon="fa-plus"></mat-icon></button>
+    <button mat-button (click)="removeAccessCode()" class="dialog-negative-button"><mat-icon fontIcon="fa-minus"></mat-icon></button>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onSubmit()" cdkFocusInitial type="submit">Submit Access Code(s)</button>
+</div>

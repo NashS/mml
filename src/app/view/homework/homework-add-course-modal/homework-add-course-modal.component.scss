@@ -1,0 +1,15 @@
+@mixin homework-add-course-modal-theme($theme) {
+  // Extract the palettes you need from the theme definition.
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+
+  // Define any styles affected by the theme.
+  .dialog-affirmative-button {
+    color: mat-color($primary);
+  }
+
+  .dialog-negative-button {
+    color: mat-color($warn);
+  }
+}

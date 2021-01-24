@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatDialogModule} from '@angular/material/dialog';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
@@ -13,6 +14,7 @@ import {TextFieldModule} from '@angular/cdk/text-field';
 import { isPlatformServer } from '@angular/common';
 import { Inject } from '@angular/core';
 import { PLATFORM_ID } from '@angular/core';
+
 
 @NgModule({
   declarations: [],
@@ -28,7 +30,8 @@ import { PLATFORM_ID } from '@angular/core';
     MatCardModule,
     MatSidenavModule,
     MatListModule,
-    TextFieldModule
+    TextFieldModule,
+    MatDialogModule
   ],
   providers: [
     MatIconRegistry

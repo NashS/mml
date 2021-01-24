@@ -1,3 +1,4 @@
-<p>
-  homework works!
-</p>
+<button mat-raised-button (click)="openDialog()" color="accent">Add Courses</button>
+<div *ngFor="let homework of homework$ | async">
+  <h1><a href="{{homework.url}}">{{homework.program}}</a></h1>
+</div>
