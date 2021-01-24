@@ -1,17 +1,23 @@
 @import '~@angular/material/theming';
 @import 'app/view/common-component/banner/banner.component';
 @import 'app/app.component';
+@import 'app/view/homework/homework-add-course-modal/homework-add-course-modal.component';
 
 // always include only once per project
 @include mat-core();
 
 $mml-app-primary: mat-palette($mat-amber);
-$mml-app-accent:  mat-palette($mat-light-blue);
-$mml-app-warn:    mat-palette($mat-deep-orange);
-
-// Create the theme object (a Sass map containing all of the palettes).
+$mml-app-accent: mat-palette($mat-light-blue);
+$mml-app-warn: mat-palette($mat-deep-orange);
 $mml-app-theme: mat-light-theme($mml-app-primary, $mml-app-accent, $mml-app-warn);
 
 @include angular-material-theme($mml-app-theme);
 @include banner-theme($mml-app-theme);
 @include sidenav-theme($mml-app-theme);
+
+$mml-dialog-primary: mat-palette($mat-green);
+$mml-dialog-accent: mat-palette($mat-red);
+$mml-dialog-warn: mat-palette($mat-red);
+$mml-dialog-theme: mat-light-theme($mml-dialog-primary, $mml-dialog-accent, $mml-dialog-warn);
+
+@include homework-add-course-modal-theme($mml-dialog-theme);
