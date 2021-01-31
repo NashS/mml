@@ -21,7 +21,6 @@ import { MmlAgmModule } from './lib/mml-agm/mml-agm.module';
 import { MmlAgmComponent } from './lib/mml-agm/mml-agm.component';
 import { HomeworkComponent } from './view/homework/homework.component';
 import { HomeworkAddCourseModalComponent } from './view/homework/homework-add-course-modal/homework-add-course-modal.component';
-import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -57,7 +56,7 @@ import { CookieService } from 'ngx-cookie-service';
     }),
     MmlAgmModule
   ],
-  providers: [CookieService],
+  providers: [],
   exports: []
 })
 export class AppModule { }
