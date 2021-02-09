@@ -21,6 +21,7 @@ import { MmlAgmModule } from './lib/mml-agm/mml-agm.module';
 import { MmlAgmComponent } from './lib/mml-agm/mml-agm.component';
 import { HomeworkComponent } from './view/homework/homework.component';
 import { HomeworkAddCourseModalComponent } from './view/homework/homework-add-course-modal/homework-add-course-modal.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { HomeworkAddCourseModalComponent } from './view/homework/homework-add-co
     HomeworkAddCourseModalComponent
   ],
   imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     CommonModule,
     NgtUniversalModule,
     TransferHttpCacheModule,
@@ -57,6 +59,7 @@ import { HomeworkAddCourseModalComponent } from './view/homework/homework-add-co
     MmlAgmModule
   ],
   providers: [],
-  exports: []
+  exports: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

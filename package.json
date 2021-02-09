@@ -8,20 +8,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:server:prod": "ng run mml:server && webpack --config webpack.server.config.js --progress --colors",
-    "build:browser:prod": "ng build --prod",
-    "build:prod": "npm run build:browser:prod && npm run build:server:prod",
-    "server": "node local.js",
-    "build:browser:serverless": "ng build --prod --base-href /",
-    "build:serverless": "npm run build:browser:serverless && npm run build:server:serverless",
-    "build:prod:deploy": "npm run build:prod && npm run deploy",
-    "build:serverless:deploy": "npm run build:serverless && npm run deploy",
+    "build:serverless:deploy": "npm run build:ssr && npm run deploy",
     "deploy": "serverless deploy",
-    "build:server:serverless": "ng run mml:server:serverless && webpack --config webpack.server.config.js --progress --colors",
     "dev:ssr": "ng run mml:serve-ssr",
     "serve:ssr": "node dist/mml/server/main.js",
     "build:ssr": "ng build --prod && ng run mml:server:production",
-    "prerender": "ng run mml:prerender"
+    "serve:sls": "serverless offline start",
+    "build:sls": "ng build --prod && ng run mml:serverless:production"
   },
   "private": true,
   "dependencies": {
@@ -40,7 +33,7 @@
     "@angular/router": "~9.1.13",
     "@fortawesome/angular-fontawesome": "^0.8.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@ng-toolkit/serverless": "^1.1.51",
+    "@ng-toolkit/serverless": "^8.1.0",
     "@ng-toolkit/universal": "^8.1.0",
     "@nguniversal/express-engine": "^9.1.1",
     "angular-bootstrap-md": "^7.5.4",
@@ -53,9 +46,12 @@
     "font-awesome": "^4.7.0",
     "ngx-webstorage-service": "^4.1.0",
     "rxjs": "~6.6.3",
+    "serverless": "^1.76.1",
+    "serverless-apigw-binary": "^0.4.4",
     "serverless-finch": "^2.6.0",
+    "serverless-offline": "^6.8.0",
     "ts-loader": "4.2.0",
-    "tslib": "^1.14.1",
+    "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
@@ -81,13 +77,10 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "opencollective": "^1.0.3",
-    "protractor": "^5.4.4",
-    "serverless": "1.26.1",
-    "serverless-apigw-binary": "^0.4.4",
+    "protractor": "~7.0.0",
     "ts-loader": "4.2.0",
-    "ts-node": "~7.0.0",
-    "tslint": "~5.11.0",
-    "typescript": "~3.8.3",
-    "webpack-cli": "^3.3.12"
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~3.8.3"
   }
 }

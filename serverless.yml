@@ -3,6 +3,7 @@ service: mml
 
 plugins:
   - serverless-apigw-binary
+  - serverless-offline
 
 provider:
   name: aws
@@ -19,6 +20,7 @@ package:
    - firebug-lite/**
    - e2e/**
    - coverage/**
+   - '!node_modules/@vendia/**'
    - '!node_modules/aws-serverless-express/**'
    - '!node_modules/binary-case/**'
    - '!node_modules/type-is/**'
@@ -33,7 +35,7 @@ custom:
 
 functions:
   api:
-    handler: lambda.universal
+    handler: lambda.handler
     events:
       - http: ANY {proxy+}
       - http: ANY /
