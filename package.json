@@ -50,12 +50,12 @@
     "serverless-apigw-binary": "^0.4.4",
     "serverless-finch": "^2.6.0",
     "serverless-offline": "^6.8.0",
-    "ts-loader": "4.2.0",
+    "ts-loader": "9.4.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.901.13",
+    "@angular-devkit/build-angular": "~15.0.4",
     "@angular-devkit/core": "~9.1.13",
     "@angular-devkit/schematics": "~9.1.13",
     "@angular/cli": "~9.1.13",
@@ -78,7 +78,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "opencollective": "^1.0.3",
     "protractor": "~7.0.0",
-    "ts-loader": "4.2.0",
+    "ts-loader": "9.4.2",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
